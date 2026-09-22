@@ -1,0 +1,24 @@
+## Build
+bin/
+obj/
+publish/
+*.user
+*.suo
+
+## Local / temp
+generated-*.png
+dfu-try2.bin
+*.tmp
+DFU/zadig.exe
+
+## Third-party package archives & extracts (native/ has the runtime tools)
+third_party/
+
+## OS
+Thumbs.db
+.DS_Store
+
+## Secrets
+*.token
+.env
+.env.*

@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>Jhoinrch CAN Tool</AssemblyName>
+    <RootNamespace>DfuTool</RootNamespace>
+    <AssemblyTitle>Jhoinrch CAN Tool</AssemblyTitle>
+    <Product>Jhoinrch CAN Tool</Product>
+    <ApplicationIcon>app-icon.ico</ApplicationIcon>
+    <!-- Single-file publish defaults (applied at publish time) -->
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Window title-bar icon (exe icon already set via ApplicationIcon) -->
+    <Resource Include="app-icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Embed dfu-util + runtime DLLs so the single exe is self-contained -->
+    <EmbeddedResource Include="native\dfu-util.exe" LogicalName="DfuTool.native.dfu-util.exe" />
+    <EmbeddedResource Include="native\dfu-prefix.exe" LogicalName="DfuTool.native.dfu-prefix.exe" />
+    <EmbeddedResource Include="native\dfu-suffix.exe" LogicalName="DfuTool.native.dfu-suffix.exe" />
+    <EmbeddedResource Include="native\libusb-1.0.dll" LogicalName="DfuTool.native.libusb-1.0.dll" />
+    <EmbeddedResource Include="native\libstdc++-6.dll" LogicalName="DfuTool.native.libstdc++-6.dll" />
+    <EmbeddedResource Include="native\libgcc_s_seh-1.dll" LogicalName="DfuTool.native.libgcc_s_seh-1.dll" />
+    <EmbeddedResource Include="native\libwinpthread-1.dll" LogicalName="DfuTool.native.libwinpthread-1.dll" />
+    <EmbeddedResource Include="native\libatomic-1.dll" LogicalName="DfuTool.native.libatomic-1.dll" />
+    <EmbeddedResource Include="native\libgomp-1.dll" LogicalName="DfuTool.native.libgomp-1.dll" />
+    <EmbeddedResource Include="native\libquadmath-0.dll" LogicalName="DfuTool.native.libquadmath-0.dll" />
+    <EmbeddedResource Include="native\zadig.exe" LogicalName="DfuTool.native.zadig.exe" />
+  </ItemGroup>
+
+</Project>
