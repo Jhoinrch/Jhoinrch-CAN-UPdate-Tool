@@ -1,7 +1,6 @@
 # Usage Guide
 
-Step-by-step usage of **Jhoinrch CAN UPdate Tool**.  
-Insert one screenshot under each step, then upload this file to GitHub.
+Step-by-step usage of **Jhoinrch CAN UPdate Tool**.
 
 ---
 
@@ -9,8 +8,7 @@ Insert one screenshot under each step, then upload this file to GitHub.
 
 Put the device into DFU mode (usually hold **BOOT0** while powering on).
 
-<!-- INSERT PHOTO: device / BOOT0 enter DFU -->
-![Step 1 — Enter DFU mode](docs/images/step-01-enter-dfu.png)
+![Step 1 — Enter DFU mode](images/step-01-enter-dfu.jpg)
 
 ---
 
@@ -18,8 +16,7 @@ Put the device into DFU mode (usually hold **BOOT0** while powering on).
 
 If the device is not detected, click **ZADIG**, pick `DFU in FS Mode` → **WinUSB** → **Replace Driver**.
 
-<!-- INSERT PHOTO: Zadig driver replace dialog -->
-![Step 2 — Zadig WinUSB driver](docs/images/step-02-zadig-driver.png)
+![Step 2 — Zadig WinUSB driver](images/step-02-zadig-driver.png)
 
 ---
 
@@ -27,8 +24,7 @@ If the device is not detected, click **ZADIG**, pick `DFU in FS Mode` → **WinU
 
 Click **Refresh** to enumerate DFU devices, then select the target device in the list.
 
-<!-- INSERT PHOTO: device combo / refresh -->
-![Step 3 — Refresh and select device](docs/images/step-03-select-device.png)
+![Step 3 — Refresh and select device](images/step-03-select-device.png)
 
 ---
 
@@ -36,8 +32,7 @@ Click **Refresh** to enumerate DFU devices, then select the target device in the
 
 Click **Browse** to choose a `.dfu` or `.bin` file, then click **Parse** to inspect format, address, size, VID:PID, and CRC.
 
-<!-- INSERT PHOTO: browse + parse result -->
-![Step 4 — Select and parse firmware](docs/images/step-04-parse-firmware.png)
+![Step 4 — Select and parse firmware](images/step-04-parse-firmware.png)
 
 ---
 
@@ -45,9 +40,6 @@ Click **Browse** to choose a `.dfu` or `.bin` file, then click **Parse** to insp
 
 For `.bin` files, fill in the flash address (default `0x08000000`).  
 `.dfu` files already contain the address, so this box is disabled.
-
-<!-- INSERT PHOTO: address / length fields -->
-![Step 5 — Set flash address](docs/images/step-05-set-address.png)
 
 ---
 
@@ -59,8 +51,7 @@ For `.bin` files, fill in the flash address (default `0x08000000`).
 
 Watch the progress bar and the log panel at the bottom.
 
-<!-- INSERT PHOTO: flash / read buttons + progress -->
-![Step 6 — Flash or Read](docs/images/step-06-flash-or-read.png)
+![Step 6 — Flash or Read](images/step-06-flash-or-read.png)
 
 ---
 
