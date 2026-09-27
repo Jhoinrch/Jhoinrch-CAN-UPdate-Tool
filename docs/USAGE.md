@@ -8,6 +8,8 @@ Step-by-step usage of **Jhoinrch CAN UPdate Tool**.
 
 Click the **Get Firmware** button, then select and download the firmware you need.
 
+![Step 1 — Get Firmware](images/01.png)
+
 ---
 
 ## 2. Enter DFU mode
