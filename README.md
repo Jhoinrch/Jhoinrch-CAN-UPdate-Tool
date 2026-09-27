@@ -2,6 +2,12 @@
 
 STM32 USB DFU firmware upgrade tool for Windows. Designed for Jhoinrch / CANable-style USB-CAN adapters based on STM32.
 
+> [!IMPORTANT]
+> ## [📘 How to use — step-by-step Usage Guide](docs/USAGE.md)
+> Click the link above for the full tutorial with screenshots: get firmware, DFU mode, driver install, flash / read.
+
+# [**➡️ Open the Usage Guide**](docs/USAGE.md)
+
 ## Features
 
 - **Device enumeration** — list DFU-mode devices (STM32 multi alternate settings are merged into one row)
@@ -35,12 +41,11 @@ DFU/
 
 ## Usage
 
-1. Put the device into DFU mode (usually hold BOOT0 while powering on)
-2. If the device is not detected, click **ZADIG**, pick `DFU in FS Mode` → WinUSB → Replace Driver
-3. Click **Refresh** to enumerate devices and select the target
-4. **Browse** to choose a `.dfu` or `.bin` file, then **Parse** to inspect it
-5. For `.bin`, fill in the flash address (default `0x08000000`)
-6. Click **Flash** to download, or **Read** to export firmware
+Full step-by-step tutorial with screenshots:
+
+### [📘 How to use — Usage Guide](docs/USAGE.md)
+
+In the app, click the green **How to use** button to open the same guide in your browser.
 
 ## Build
 
