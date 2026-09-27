@@ -77,6 +77,26 @@ public partial class MainWindow : Window
     private const string MoreProductsUrl =
         "https://www.amazon.com/stores/page/BEC6FB30-6DA6-421E-80B6-1904FA0C0783?ingress=2&lp_context_asin=B0CRB8KXWL&lp_context_query=Jhoinrch&visitId=18c01741-4212-48c3-b0e8-be1effe3e467&store_ref=bl_ast_dp_brandlogo_sto&ref_=ast_bln";
 
+    private const string TutorialUrl =
+        "https://github.com/Jhoinrch/Jhoinrch-CAN-UPdate-Tool/blob/main/docs/USAGE.md";
+
+    private void TutorialBtn_Click(object sender, RoutedEventArgs e)
+    {
+        try
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = TutorialUrl,
+                UseShellExecute = true,
+            });
+            AppendLog("Opened usage guide.");
+        }
+        catch (Exception ex)
+        {
+            AppendLog($"Open usage guide failed: {ex.Message}");
+        }
+    }
+
     private void MoreProductsBtn_Click(object sender, RoutedEventArgs e)
     {
         try
