@@ -342,7 +342,7 @@
                                 HorizontalAlignment="Right">
                         <!-- Highlighted link buttons -->
                         <Button x:Name="TutorialBtn"
-                                Content="USAGE GUIDE"
+                                Content="How to use"
                                 Height="32"
                                 Padding="14,0"
                                 Margin="0,0,10,0"
