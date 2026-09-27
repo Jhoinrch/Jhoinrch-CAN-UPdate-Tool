@@ -341,6 +341,50 @@
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Right">
                         <!-- Highlighted link buttons -->
+                        <Button x:Name="TutorialBtn"
+                                Content="USAGE GUIDE"
+                                Height="32"
+                                Padding="14,0"
+                                Margin="0,0,10,0"
+                                FontSize="12"
+                                FontWeight="Bold"
+                                FontFamily="Segoe UI"
+                                Cursor="Hand"
+                                BorderThickness="1"
+                                Background="#059669"
+                                BorderBrush="#059669"
+                                Foreground="#FFFFFF"
+                                ToolTip="Open the step-by-step usage guide"
+                                Click="TutorialBtn_Click">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border x:Name="bd"
+                                            Background="{TemplateBinding Background}"
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            BorderThickness="{TemplateBinding BorderThickness}"
+                                            CornerRadius="4"
+                                            Padding="{TemplateBinding Padding}">
+                                        <ContentPresenter HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"
+                                                          RecognizesAccessKey="True"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="bd" Property="Background" Value="#047857"/>
+                                            <Setter TargetName="bd" Property="BorderBrush" Value="#047857"/>
+                                        </Trigger>
+                                        <Trigger Property="IsPressed" Value="True">
+                                            <Setter TargetName="bd" Property="Background" Value="#065F46"/>
+                                        </Trigger>
+                                        <Trigger Property="IsEnabled" Value="False">
+                                            <Setter TargetName="bd" Property="Background" Value="#86C5B0"/>
+                                            <Setter TargetName="bd" Property="BorderBrush" Value="#86C5B0"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
                         <Button x:Name="GetFirmwareBtn"
                                 Content="Get Firmware"
                                 Height="28"
